@@ -11,9 +11,10 @@ app.use(stormpath.init(app, {
 }));
 
 app.get('/', function(req, res){
+  console.log('HELLO!');
   if (req.user) {
     console.log('logged in as req.user: ',req.user);
-    res.send('You are logged in as : ' + req.user.name);
+    res.send('You are logged in as : ' + req.user.username);
   } else {
     res.send('Visit <a href="/login">/login</a> or <a href="/register">/register</a>.');
   }
