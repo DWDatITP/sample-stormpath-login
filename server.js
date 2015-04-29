@@ -10,6 +10,15 @@ app.use(stormpath.init(app, {
   application:  process.env.STORMPATH_URL
 }));
 
+app.get('/', function(req, res){
+  if (req.user) {
+    console.log('logged in as req.user: ',req.user);
+    res.send('You are logged in as : ' + req.user.name);
+  } else {
+    res.send('Visit <a href="/login">/login</a> or <a href="/register">/register</a>.');
+  }
+});
+
 app.listen(port, function(){
   console.log('listening on port ',port);
 });
