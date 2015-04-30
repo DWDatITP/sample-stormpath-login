@@ -10,7 +10,7 @@ For more info or additional help, see the [Stormpath Docs](https://devcenter.her
 To run this sample app locally:
 
   * clone it:
-  * `git clone ...`
+  * `git clone https://github.com/DWDatITP/sample-stormpath-login.git`
   * cd to the directory:
   * `cd sample-stormpath-login`
   * install npm dependencies:
