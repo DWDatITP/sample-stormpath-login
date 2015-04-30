@@ -18,6 +18,7 @@ To run this sample app locally:
   * *Important*: create a `.env` file with your stormpath credentials, see below
   * *After* you've set up your .env file, run this command to start your server:
   * `env $(cat .env) nodemon server.js`
+  * visit http://localhost:5000
 
 ### Setting up stormpath
 
@@ -47,3 +48,9 @@ your `.env` file would have a line like so:
 Your `.env` file should have 4 lines in it, one for each of the environment variables.
 
 Now that your `.env` file is set up, you can run the command described above to run the app locally.
+
+To view the users who have signed up for your app, open the stormpath addon:
+
+`heroku addons:open stormpath`
+
+And click the "accounts" link.
